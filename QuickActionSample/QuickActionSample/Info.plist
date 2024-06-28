@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>UIApplicationShortcutItems</key>
+	<array>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeAlarm</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>QuickAction.Alarm</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Alarm Jadwal</string>
+		</dict>
+		<dict>
+			<key>UIApplicationShortcutItemIconType</key>
+			<string>UIApplicationShortcutIconTypeDate</string>
+			<key>UIApplicationShortcutItemIconFile</key>
+			<string>ic_add</string>
+			<key>UIApplicationShortcutItemType</key>
+			<string>QuickAction.Add</string>
+			<key>UIApplicationShortcutItemTitle</key>
+			<string>Tambah Jadwal</string>
+		</dict>
+	</array>
+</dict>
+</plist>
