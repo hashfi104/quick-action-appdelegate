@@ -13,18 +13,34 @@ class QuickActionsHandler {
     private init() { }
     
     func createDefaultQuickActions() {
-        // Initialize shortcut item with subtitle
-        let item: UIApplicationShortcutItem = UIApplicationShortcutItem(
+        // Initialize shortcut item with subtitle and system image
+        let firstItem: UIApplicationShortcutItem = UIApplicationShortcutItem(
             type: ShortcutItemType.search.rawValue,
             localizedTitle: ShortcutItemTitle.search.rawValue,
             localizedSubtitle: "Ini Subtitle",
             icon: UIApplicationShortcutIcon(systemImageName: "magnifyingglass")
         )
-        addShortcutItem(item: item)
+        
+        // Initialize shortcut item with subtitle and icon type
+        let secondItem: UIApplicationShortcutItem = UIApplicationShortcutItem(
+            type: ShortcutItemType.search.rawValue,
+            localizedTitle: ShortcutItemTitle.search.rawValue,
+            localizedSubtitle: "Ini Subtitle",
+            icon: UIApplicationShortcutIcon(type: .search)
+        )
+        
+        // Initialize shortcut item with subtitle and custom image
+        let thirdItem: UIApplicationShortcutItem = UIApplicationShortcutItem(
+            type: ShortcutItemType.search.rawValue,
+            localizedTitle: ShortcutItemTitle.search.rawValue,
+            localizedSubtitle: "Ini Subtitle",
+            icon: UIApplicationShortcutIcon(templateImageName: "contact_center")
+        )
+        addShortcutItem(item: firstItem)
     }
 
     private func addShortcutItem(item: UIApplicationShortcutItem) {
-        // Remove current item if any
+        // Remove current item if any to avoid redundancy
         removeShortcutItem(item: item)
 
         // Add Item
