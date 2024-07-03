@@ -110,3 +110,14 @@ func application(_ application: UIApplication, didFinishLaunchingWithOptions lau
 ## Demo
 https://github.com/hashfi104/quick-action-appdelegate/assets/4686182/167705ec-654c-407c-9d44-167e574511cf
 
+## Questions
+<b>Q:</b> How we handle in <b>SceneDelegate</b> if the app minimum version is IOS 13?
+<br></br>
+<b>A:</b> Here is how we handle on <b>SceneDelegate</b> class
+```swift
+func windowScene(_ windowScene: UIWindowScene, performActionFor shortcutItem: UIApplicationShortcutItem, completionHandler: @escaping (Bool) -> Void) {
+    let navVC: UINavigationController = (window?.rootViewController) as! UINavigationController
+    let rootVC: UIViewController = navVC.topViewController!
+    rootVC.title = shortcutItem.localizedTitle
+}
+```
